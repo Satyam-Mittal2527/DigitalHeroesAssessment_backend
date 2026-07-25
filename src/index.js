@@ -14,8 +14,6 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 
-import cors from "cors";
-
 app.use(
   cors({
     origin: [
