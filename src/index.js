@@ -14,12 +14,16 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 
+import cors from "cors";
+
 app.use(
-    cors({
-        origin: "http://localhost:3000",
-        origin: "https://digitalheroesassessment-backend.onrender.com",
-        credentials: true,
-    })
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://digitalheroesassessment.vercel.app",
+    ],
+    credentials: true,
+  })
 );
 
 app.use(express.json());
